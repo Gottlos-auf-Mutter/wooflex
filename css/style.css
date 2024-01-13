@@ -1,0 +1,101 @@
+@import "reset.css";
+@import "colors.css";
+@import "typography.css";
+@import "pagebuilder.css";
+@import "grid.css";
+/*@import "wf-woocommerce.css"; */
+
+/* Geeneral Styling */
+:root {
+  --font-monospace: "Fira Code", "Lucida Console", Monaco, monospace;
+  --font-sans-serif: Verdana, Helvetica, sans-serif;
+  --font-serif: "Roboto Slab", Georgia, serif;
+}
+
+html {
+  font-family: var(--font-sans-serif);
+  font-size: 1rem;
+  scroll-behavior: smooth;
+	overflow-x: hidden;
+}
+
+body {
+	overflow-x: hidden;
+  background: var(--wf-bg);
+  color: var(--wf-fg);
+  line-height: 1.675;
+  word-wrap: break-word;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+
+/********* Site-Wide Elements ********/
+#main {padding-bottom: 50px;}
+
+.primary-footer {
+	background: var(--wf-contrast);
+	color: var(--wf-white);
+	margin-top: auto;
+}
+
+.footermenu {
+	display: flex;
+	justify-content: space-between;
+}
+
+.primary-header {
+	background: var(--wf-contrast);
+	color: var(--wf-base);
+	padding: 1rem;
+	margin: 0;
+	font-size: 0.9rem;
+	text-align: right;
+	font-family: var(--font-monospace);
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.menu {
+	display: flex;
+	justify-content: space-between;
+	gap: 4rem;
+	align-items: center;
+}
+
+.logo img {
+	max-height: 50px;
+	display: inline-block;
+}
+.mainnav ul {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: flex-end;
+	flex-wrap: wrap;
+	gap: 1.5rem 3rem;
+	line-height: 0rem;
+}
+
+
+button, .btn {
+	background-color: var(--wf-contrast);
+	color: var(--wf-base);
+	border-radius: 5px;
+	border: none;
+}
+
+button:hover, .btn:hover, button:focus, .btn:focus {
+	background-color: var(--wf-gray-dark);
+}
+
+
+.btn-primary {
+	background-color: var(--wf-primary-dark);
+}
+
+.btn-primary:hover, .btn-primary:focus {
+	background-color: var(--wf-primary);
+}
+
