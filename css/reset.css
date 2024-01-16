@@ -1,31 +1,13 @@
 /* Reset */
 
-
-
-/* Reset margins and paddings on most elements */
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-ul,
-ol,
-li,
-p,
-pre,
-blockquote,
-figure,
-hr {
+body, h1, h2, h3, h4, h5, h6, ul, ol, 
+li, p, pre, blockquote, figure, hr {
   margin: 0;
   padding: 0;
   font-weight: normal;
 }
 
-ol, ul {
-  list-style: none;
-}
+ol, ul { list-style: none; }
 
 button {
   border-radius: 0; 
@@ -33,28 +15,19 @@ button {
   background-color: transparent;
 }
 
-embed,
-iframe,
-img,
-object,
-video {
+embed, iframe, img, object, video {
   max-width: 100%;
   height: auto;
 	display: block;
 }
 
-input,
-textarea,
-select,
-button {
+input, textarea, select, button {
   color: inherit; 
   font: inherit; 
   letter-spacing: inherit; 
 }
 
-[hidden] {
-  display: none !important;
-}
+[hidden] { display: none !important; }
 
 a {
 	color: inherit;

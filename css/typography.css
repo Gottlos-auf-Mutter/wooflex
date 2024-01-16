@@ -17,14 +17,21 @@ figcaption {
   font-size: 0.9rem;
 }
 
-*::selection {
-  color: var(--wf-white);
-  background: var(--wf-primary);
-}
+p { margin-bottom: 1em; }
 
+
+html { font-size: 1rem;}
+@media (min-width: 800px) {
+	html { font-size: 1.3rem;}
+}
+body {
+  line-height: 1.4;
+}
 h1 {text-align: center} 
 
-h1,h2,h3,h4,h5,h6 {
+h2 {text-align: center;}
+
+h1, h2, h3, h4, h5, h6 {
   color: var(--wf-primary);
   font-family: var(--font-monospace);
   font-weight: 300;
@@ -35,18 +42,23 @@ h1,h2,h3,h4,h5,h6 {
 h2,h3,h4,h5,h6 { border-bottom: 1px solid var(--bg1);
 }
 
-h1,h2 {font-weight: 400;}
-h1 {font-size: 1.875rem;}
-h2 {font-size: 1.75rem;}
-h3 {font-size: 1.625rem;}
-@media (min-width: 800px) {
-  h1 {font-size: 2.375rem;}
-  h2 {font-size: 2rem;}
-  h3 {font-size: 1.75rem;}
-}
+h1, h2 {font-weight: 400;}
+h1 {font-size: 2.5rem;}
+h2 {font-size: 2rem;}
+h3 {font-size: 1.7rem;}
 h4 {font-size: 1.5rem;}
-h5 {font-size: 1.375rem;}
-h6 {font-size: 1.25rem;}
+h5 {font-size: 1.3rem;}
+h6 {font-size: 1.2rem;}
+
+
+
+.has-small-font-size { font-size: .7rem !important;} 
+.has-medium-font-size { font-size: 1rem !important;} 
+.has-large-font-size { font-size: 1.5rem !important;} 
+.has-x-large-font-size { font-size: 2rem !important;} 
+
+
+
 
 table {
   table-layout: fixed;
@@ -100,8 +112,13 @@ blockquote, pre {
 blockquote {
   border-left: var(--wf-primary) 5px solid;
   margin: 0.5rem 0;
-  & code {background: var(--wf-gray);}
-  & p:first-of-type {margin-top: 0;}
-  & p:last-of-type {margin-bottom: 0;}
+}
+blockquote code {background: var(--wf-gray);}
+blockquote p:first-of-type {margin-top: 0;}
+blockquote p:last-of-type {margin-bottom: 0;}
+
+*::selection {
+	color: var(--wf-white);
+	background: var(--wf-primary);
 }
 

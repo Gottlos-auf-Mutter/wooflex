@@ -9,69 +9,20 @@
  * Activate Woocommerce Suopport
  *------------------------------------------------------------------
  */
-function mytheme_add_woocommerce_support() {
+function wf_add_woocommerce_support() {
 	add_theme_support( 'woocommerce' );
 }
-add_action( 'after_setup_theme', 'mytheme_add_woocommerce_support' );
+add_action( 'after_setup_theme', 'wf_add_woocommerce_support' );
 
 
-add_action( 'after_setup_theme', 'yourtheme_setup' );
+add_action( 'after_setup_theme', 'wf_setup' );
  
-function yourtheme_setup() {
+function wf_setup() {
     add_theme_support( 'wc-product-gallery-zoom' );
     add_theme_support( 'wc-product-gallery-lightbox' );
     add_theme_support( 'wc-product-gallery-slider' );
 }
 
-
-/* Disable Woocommerce Css
- * ---------------------------------------------------------------- */
-// add_filter( 'woocommerce_enqueue_styles', '__return_false' );
-/**
- * Change Wrappers to enable bootstrap Grid
- *------------------------------------------------------------------
- */
-remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10);
-remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10);
-
-add_action('woocommerce_before_main_content', 'my_theme_wrapper_start', 10);
-add_action('woocommerce_sidebar', 'my_theme_wrapper_end', 10);
-
-/** div.row around sidebar and main content */
-function my_theme_wrapper_start() {
-  echo '<div class="container">';
-	echo '<div class="row">';
-}
-
-function my_theme_wrapper_end() {
-  echo '</div> <!-- row -->';
-	echo '</div> <!-- container -->';
-}
-
-/**
- *  Wrap Main Contentn in section to order page with bootstrap
- *------------------------------------------------------------------
- */
-add_action( 'woocommerce_before_shop_loop', 'woostrap_products_grid_container_start', 4);
-function woostrap_products_grid_container_start() {
-	echo '<section class="products col-xl-9 col-lg-8 order-lg-2">';
-}
-add_action( 'woocommerce_after_main_content', 'woostrap_product_grid_container_end', 5);
-function woostrap_product_grid_container_end() {
-	echo '</section> <!-- products -->';
-}
-
-/* Wrap all the "before_shop_loop" Stuff in a row
- * --------------------------------------------------------------------------------------*/
-add_action( 'woocommerce_before_shop_loop', 'woostrap_products_grid_info_start', 6);
-function woostrap_products_grid_info_start() {
-	echo '<div class="row products-info-section">';
-}
-
-add_action( 'woocommerce_before_shop_loop', 'woostrap_products_grid_info_end', 60);
-function woostrap_products_grid_info_end() {
-	echo '</div>';
-}
 
 /**
  * Removing the 'Add-to-cart'-button beneath products on shop/archive pages
@@ -108,7 +59,7 @@ function woocommerce_header_add_to_cart_fragment( $fragments ) {
 
 
 
-// change "angeot" bagde for German Site back to sale
+// change "angebot" bagde for German Site back to sale
 add_filter('woocommerce_sale_flash', 'woocommerce_custom_sale_text', 10, 3);
 function woocommerce_custom_sale_text($text, $post, $_product)
 {
@@ -121,10 +72,9 @@ function woocommerce_custom_sale_text($text, $post, $_product)
 * ====================================
 */
 
-// Remove product meta 
-remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
 
-// change "angeot" bagde for German Site back to sale
+
+// remove Sidebar from single Product page
 add_action( 'wp', 'woostrap_remove_sidebar_product_pages' );
 function woostrap_remove_sidebar_product_pages() {
 	if ( is_product() ) {
@@ -137,15 +87,7 @@ remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_singl
 
 add_action( 'woocommerce_before_single_product', 'woocommerce_template_single_title', 5 );
 
-/* backorder text on single product page */
- 
-function so_42345940_backorder_message( $text, $product ){
-  if ( $product->managing_stock() && $product->is_on_backorder( 1 ) ) {
-      $text = __( 'Backorder: We will produce/print it for you and ship it to you within the next 10 Days' , 'woostrap' );
-  }
-  return $text;
-}
-add_filter( 'woocommerce_get_availability_text', 'so_42345940_backorder_message', 10, 2 );
+
 
 /**
 * ====================================

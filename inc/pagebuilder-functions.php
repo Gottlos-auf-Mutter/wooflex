@@ -1756,7 +1756,7 @@ add_action( 'acf/include_fields', function() {
 					'max' => '',
 				),
 			),
-			'min' => 1,
+			'min' => 0,
 			'max' => '',
 			'button_label' => 'Add Content Elements',
 		),

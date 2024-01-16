@@ -1,12 +1,12 @@
-.pb-section {
-	margin-bottom: 20px;
+.wf-block {
+	margin-bottom: 2rem;
 }
 .bg-light {
 	padding: 20px;
 	background: var(--wf-white);
 }
 
-.services, .products, .accordions, .brands, .teasers {
+.wf-services-block, .-wfproducts, .accordions, .brands, .teasers {
 	display: flex;
 	justify-content: space-between;
 	gap: 10px 20px;
@@ -27,63 +27,35 @@
 		flex-basis: 0;
 	}
 }
+
+
+
 /* --------- HEROBANNER --------- */
 
-.herobanner-block,
-.herobanner-element {
-	overflow: hidden;
-	background: #6c757d;
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	color: #f8f9fa;
-	text-shadow: 0px 1px 14px rgba(0, 0, 0, 0.6); 
-	padding: 10px;
-	height: 450px;
-}
-.herobanner_small .herobanner-element {
-	height: 300px;
+#main > :first-child:is(.herobanner-block)  {
+	margin-top: -2rem;
 }
 
-/* --------- TEASER --------- */
-
-.teaser {
-	width: 100%;
+.herobanner-block {
+	background: center center / cover no-repeat var(--wf-black);
+	color: var(--wf-white);
+	text-shadow: 0px 1px 20px rgba(0, 0, 0, 1); 
+	padding: 1rem;
+	min-height: 15rem;
+	text-align: center;
 }
 
-.teaser a:hover,
-.teaser a:focus {
-	text-decoration: none;
-	cursor: pointer; 
-}
-
-.teaser-element {
-	overflow: hidden;
-	background: #6c757d;
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	color: #f8f9fa;
-	text-shadow: 0px 1px 14px rgba(0, 0, 0, 0.6); 
-	padding: 10px;
-	height: 150px;
-	opacity: 0.95;
+.herobanner-wrapper {
+	display:flex;
+	align-items: center;
+	justify-content: right;
 
 }
 
-.teaser-link:hover, .teaser-link:focus {
-	opacity: 1;
-	transform: scale(1.005);
-cursor: pointer; }
-
-.teaser-element > h2 {
-	filter: drop-shadow(0 0 30px #333); 
+.herobanner-content {
+	max-width: 50ch;
 }
 
-@media (min-width: 768px) {
-	.teaser_small .teaser-element { height: 200px; } 
-	.teaser-element {height: 300px; } 
-}
 
 
 /* --------- ACCORDION --------- */
@@ -144,8 +116,4 @@ cursor: pointer; }
 	max-height: 100vh;
 	padding: 1em;
 }
-
-
-/* --------- SERVICES --------- */
-
 

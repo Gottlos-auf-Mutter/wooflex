@@ -1,7 +1,5 @@
-/* CSS GRID SETUP 
-   to get rid of extra Wrapper Divs ...
-   see https://codepen.io/kevinpowell/pen/ExrZrrw  */
-.content-grid {
+/* CSS GRID SETUP FOR WORPRESS BLOCKEDITOR BACKEND   */
+.wp-block-post-content {
   --padding-inline: 1rem;
   --content-max-width: 900px;
   --breakout-max-width: 1050px;
@@ -21,24 +19,30 @@
     minmax(var(--padding-inline), 1fr) [full-width-end];
 }
 
-.content-grid > :not(.breakout, .full-width),
-.full-width > :not(.breakout, .full-width)  {
+.wp-block-post-content > :not(.breakout, .full-width) {
   grid-column: content;
 }
 
-.content-grid > .breakout {
-  grid-column: breakout;
+.breakout {
+  grid-column: breakout !important;
 }
 
-.content-grid > .full-width {
-  grid-column: full-width;
+.full-width {
+  grid-column: full-width !important;
 
-  display: grid;
-  grid-template-columns: inherit;
 }
 
-img.full-width {
-  width: 100%;
-  max-height: 45vh;
-  object-fit: cover;
+
+/*-------- Backend Styles --------*/
+.wp-block { max-width: 100%; width: 100%; }
+.editor-styles-wrapper .edit-post-visual-editor__post-title-wrapper  {
+	background: #222;
+	color: #555;
+	text-align: center;
+	margin-top: 0 !important;
+	text-transform: uppercase;
 }
+html :where(.wp-block)  { margin: 0;}
+
+
+
