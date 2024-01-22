@@ -45,4 +45,11 @@
 html :where(.wp-block)  { margin: 0;}
 
 
-
+.edit-post-visual-editor__post-title-wrapper .editor-post-title {
+	font-family: sans-serif;
+	color: var(--wp--preset--color--vivid-cyan-blue);
+	opacity: .3;
+	font-size: 1.5rem;
+	letter-spacing: .3rem;
+	margin: .3rem auto;
+}

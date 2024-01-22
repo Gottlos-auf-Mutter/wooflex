@@ -12,8 +12,13 @@
   --font-monospace: Courier, monospace;
   --font-sans-serif: Verdana, Helvetica, sans-serif;
   --font-serif: Times, Georgia, serif;
+  --font-special1: 'fette_fraktur', 'times', serif;
+  --font-special2: 'zombie_punks', Courier, monospace;
+	
+	--wf-br-small: .4rem;
+	--wf-br: .8rem;
+	--wf-br-big: 1.2rem;
 }
-
 html {
   font-family: var(--font-sans-serif);
   scroll-behavior: smooth;
@@ -295,6 +300,5 @@ button:focus, .btn:focus, .button:focus {
 
 /*--------- Mailpoet Newsletter -------*/
 
-.mailpoet_form_below_posts {
-	
-}  
+.mailpoet_form  { margin-bottom: 2rem; }
+

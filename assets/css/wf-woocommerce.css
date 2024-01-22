@@ -8,3 +8,34 @@ ul.products {
 ul.products .product {
 	max-width: 40%;
 }
+
+
+/*--------- Woocommerce-Blocks -------*/
+.wc-block-grid__products {
+	  justify-content: center;
+		gap: 1rem;
+}
+
+.wc-block-grid__product {
+	position: relative;
+}
+.wc-block-grid__product .price {
+	position: absolute;
+	top: -1rem;
+	right: -.5rem;
+	font-family: var(--font-special2);
+	color: var(--wf-primary);
+	font-size: 2.5rem;
+	transform: rotate(7deg);
+}
+.wc-block-grid__product-image img {
+	border-radius: var(--wf-br-small);
+}
+
+
+
+.wp-block-button__link {
+	background: var(--wf-primary);
+	border-radius: var(--wf-br);
+}
+
