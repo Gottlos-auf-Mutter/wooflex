@@ -45,50 +45,7 @@ Additional Theme Customizer Options
 
 /* ========  CTA Button Text ======== */
 
-function register_woostrap_customizer_settings( $wp_customize ) {
-    $wp_customize->add_setting(
-        'cta_btn_text',
-        array(
-            'default' => '',
-            'type' => 'theme_mod', // you can also use 'option'
-            'capability' => 'edit_theme_options'
-        ),
-    );
-
-    $wp_customize->add_control( new WP_Customize_Control(
-        $wp_customize,
-        'cta_btn_text',
-        array(
-            'label'      => __( 'CTA Button Text', 'textdomain' ),
-            'description' => __( 'Text for the CTA button on the homepage top-banner', 'textdomain' ),
-            'settings'   => 'cta_btn_text',
-            'priority'   => 10,
-            'section'    => 'title_tagline',
-            'type'       => 'text',
-        )
-    ) );
-
-    $wp_customize->add_setting(
-        'cta_btn_url',
-        array(
-            'default' => '',
-            'type' => 'theme_mod', // you can also use 'option'
-            'capability' => 'edit_theme_options',
-            'transport' => '',
-            'sanitize_callback' => 'esc_url',
-        ),
-    );
-
-    $wp_customize->add_control( new WP_Customize_Control(
-        $wp_customize,
-        'cta_btn_url',
-        array(
-          'type' => 'url',
-          'section' => 'title_tagline', // Add a default or your own section
-          'label' => __( 'CTA Button URL' ),
-          'description' => __( 'URL for the CTA Button' ),
-        )
-    ) );
+function register_wooflex_customizer_settings( $wp_customize ) {
 
     $wp_customize->add_setting(
         'small_logo',
@@ -132,71 +89,6 @@ function register_woostrap_customizer_settings( $wp_customize ) {
         )
     );
 
-    $wp_customize->add_setting(
-        'mailchimp_embeded_form',
-        array(
-            'default' => '',
-            'type' => 'theme_mod', // you can also use 'option'
-            'capability' => 'edit_theme_options'
-        ),
-    );
-
-    $wp_customize->add_control( new WP_Customize_Control(
-        $wp_customize,
-        'mailchimp_embeded_form',
-        array(
-            'label'      => __( 'mailchimp embeded form html', 'textdomain' ),
-            'description' => __( 'html for the mailchimp signup form', 'textdomain' ),
-            'settings'   => 'mailchimp_embeded_form',
-            'priority'   => 20,
-            'section'    => 'title_tagline',
-            'type'       => 'textarea',
-        )
-    ) );
-
-    $wp_customize->add_setting(
-        'data_protection_text',
-        array(
-            'default' => '',
-            'type' => 'theme_mod', // you can also use 'option'
-            'capability' => 'edit_theme_options'
-        ),
-    );
-
-    $wp_customize->add_control( new WP_Customize_Control(
-        $wp_customize,
-        'data_protection_text',
-        array(
-            'label'      => __( 'Data Protection Notice Text', 'textdomain' ),
-            'description' => __( 'Text infront of the Link to DPD', 'textdomain' ),
-            'settings'   => 'data_protection_text',
-            'section'    => 'title_tagline',
-            'type'       => 'text',
-        )
-    ) );
-
-    $wp_customize->add_setting(
-        'data_protection_url',
-        array(
-            'default' => '',
-            'type' => 'theme_mod', // you can also use 'option'
-            'capability' => 'edit_theme_options',
-            'sanitize_callback' => 'themeslug_sanitize_dropdown_pages',
-        ),
-    );
-
-    $wp_customize->add_control( new WP_Customize_Control(
-        $wp_customize,
-        'data_protection_url',
-        array(
-          'type' => 'dropdown-pages',
-          'section' => 'title_tagline', // Add a default or your own section
-          'label' => __( 'Data Protection Declaration' ),
-          'description' => __( 'select the page with the Data Protection Declaration' ),
-        )
-    ) );
-
-
 }
 
 function themeslug_sanitize_dropdown_pages( $page_id, $setting ) {
@@ -207,14 +99,9 @@ function themeslug_sanitize_dropdown_pages( $page_id, $setting ) {
   return ( 'publish' == get_post_status( $page_id ) ? $page_id : $setting->default );
 }
 
-add_action( 'customize_register', 'register_woostrap_customizer_settings' );
+add_action( 'customize_register', 'register_wooflex_customizer_settings' );
 
-
-
-
-
-
-function woostrap_get_menu_by_location( $location ) {
+function wooflex_get_menu_by_location( $location ) {
     if( empty($location) ) return false;
 
     $locations = get_nav_menu_locations();
@@ -232,7 +119,7 @@ Blog Custom Functions
 ======================================
 */
 
-function  woostrap_post_navigation(){
+function  wooflex_post_navigation(){
 
     $nav = '<div class="row post-nav">';
 
@@ -250,9 +137,10 @@ function  woostrap_post_navigation(){
 /*
 ====================================== 
 Pagiantion
+====================================== 
 */
 
-function bootstrap_pagination( \WP_Query $wp_query = null, $echo = true, $params = [] ) {
+function wooflex_pagination( \WP_Query $wp_query = null, $echo = true, $params = [] ) {
     if ( null === $wp_query ) {
         global $wp_query;
     }
@@ -303,7 +191,5 @@ function bootstrap_pagination( \WP_Query $wp_query = null, $echo = true, $params
 
 
 
-function woostrap_data_Protection_notice() {
-}
 
 

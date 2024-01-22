@@ -1,0 +1,10 @@
+ul.products {
+	display: flex;
+	justify-content: space-between;
+	gap: 2rem;
+}
+
+
+ul.products .product {
+	max-width: 40%;
+}

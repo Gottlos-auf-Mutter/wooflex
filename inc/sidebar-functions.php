@@ -5,7 +5,7 @@ Sidebar Function
 ======================================
 */
 
-function woostrap_sidebar_widget_setup () {
+function wooflex_sidebar_widget_setup () {
 
 	register_sidebar(
 		array(
@@ -35,4 +35,41 @@ function woostrap_sidebar_widget_setup () {
 
 }
 
-add_action( 'widgets_init', 'woostrap_sidebar_widget_setup');
+add_action( 'widgets_init', 'wooflex_sidebar_widget_setup');
+
+
+function wooflex_register_widget_areas() {
+
+  register_sidebar( array(
+    'name'          => 'Footer Widgets Top',
+    'id'            => 'footer_widgets_top',
+    'description'   => 'Area for widgets that go at the top of the footer',
+    'before_widget' => '<section class="footer-widgets footer-top>',
+    'after_widget'  => '</section>',
+    'before_title'  => '<h4>',
+    'after_title'   => '</h4>',
+  ));
+
+  register_sidebar( array(
+    'name'          => 'Footer Widgets Middle',
+    'id'            => 'footer_widgets_middle',
+    'description'   => 'Area for footer widgets that go between Logo and Menu',
+    'before_widget' => '<section class="footer-widgets footer-middle>',
+    'after_widget'  => '</section>',
+    'before_title'  => '<h4>',
+    'after_title'   => '</h4>',
+  ));
+  
+  register_sidebar( array(
+    'name'          => 'Footer Widgets Bottom',
+    'id'            => 'footer_widgets_bottom',
+    'description'   => 'Area for widgets that go on the bottom of the footer',
+    'before_widget' => '<section class="footer-widgets footer-bottom>',
+    'after_widget'  => '</section>',
+    'before_title'  => '<h4>',
+    'after_title'   => '</h4>',
+  ));
+
+}
+
+add_action( 'widgets_init', 'wooflex_register_widget_areas' );

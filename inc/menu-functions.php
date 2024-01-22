@@ -17,11 +17,6 @@ function register_wooflex_menus() {
 
 		)
 	);
-	register_nav_menu( 'primary', 'Primary Header Navigation' );
-	register_nav_menu( 'footer_col_1', 'Footer Menu 1st Column' );
-	register_nav_menu( 'footer_col_2', 'Footer Menu 2st Column' );
-	register_nav_menu( 'footer_col_3', 'Footer Menu 3st Column' );
-	register_nav_menu( 'footer_col_4', 'Footer Menu 4st Column' );
 }
 
 add_action( 'init', 'register_wooflex_menus');

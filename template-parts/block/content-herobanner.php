@@ -27,7 +27,7 @@ $align_class = $block['align'] ? 'align' . $block['align'] : '';
 				
 					<div class="herobanner-content">
 						<?php if ( $headline ) : ?>
-							<h2><?php echo "$headline" ?></h2>
+							<h1><?php echo "$headline" ?></h1>
 						<?php endif; ?>
 
 						<?php if ( $text ) : ?>

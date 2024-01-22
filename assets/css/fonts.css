@@ -1,0 +1,20 @@
+
+@font-face {
+    font-family: 'fette_fraktur';
+    src: url('../fonts/fetteclassicunzfraktur-webfont.woff2') format('woff2'),
+         url('../fonts/fetteclassicunzfraktur-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+@font-face {
+    font-family: 'zombie_punks';
+    src: url('../fonts/zombiepunksregular-webfont.woff2') format('woff2'),
+         url('../fonts/zombiepunksregular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}

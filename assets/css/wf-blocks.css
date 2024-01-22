@@ -1,0 +1,217 @@
+:root {
+	--wf-br-small: .3rem;
+}
+.wf-block {
+	margin-bottom: 2rem;
+}
+.light-bg, .dark-bg, .custom-bg {padding: 1.5rem;}
+.light-bg:not(.full-width), .dark-bg:not(.full-width), .custom-bg:not(.full-width) {
+	border-radius: var(--wf-br-small);
+}
+
+.has-background {
+	border-radius: var(--wf-br-small);
+}
+
+.light-bg { background: var(--wf-white); }
+.dark-bg {
+	background: var(--wf-gray-extradark);
+	color: var(--wf-base);
+}
+
+.services, .-wfproducts, .accordions, .brands, .teasers {
+	display: flex;
+	justify-content: space-between;
+	gap: 10px 20px;
+	flex-direction: column;
+}
+
+.service .product, .accordion, .brand, .teaser {
+	flex-grow: 1;
+	flex-basis: 1;
+	width: 100%;
+}
+
+@media (min-width: 600px) {
+	.services, .products, .accordions, .brands, .teasers {
+		flex-direction: row;
+	}
+	.service .products, .accordion, .brand, .teaser {
+		flex-basis: 0;
+	}
+}
+
+
+
+/* --------- HEROBANNER --------- */
+
+#main > :first-child:is(.herobanner-block)  {
+	margin-top: -2rem;
+}
+
+.herobanner-block, .herobanner {
+	background: center center / cover no-repeat var(--wf-black);
+	color: var(--wf-white);
+	text-shadow: 0px 1px 20px rgba(0, 0, 0, .8); 
+	padding: 1rem;
+	min-height: 15rem;
+	text-align: center;
+}
+
+.herobanner-wrapper {
+	display:flex;
+	align-items: center;
+	justify-content: right;
+
+}
+
+.herobanner-content {
+	max-width: 50ch;
+	margin: 0 3rem;
+}
+
+/* --------- TEASERBANNER --------- */
+
+.teaser {
+	width: 100%;
+}
+
+.teaser a:hover,
+.teaser a:focus {
+	text-decoration: none;
+	cursor: pointer; 
+}
+
+.teaser-element {
+	overflow: hidden;
+	background: #6c757d;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: #f8f9fa;
+	text-shadow: 0px 1px 14px rgba(0, 0, 0, 0.6); 
+	border-radius: var(--wf-br-small);
+	padding: 2rem;
+	height: 150px;
+	opacity: 0.95;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	justify-content: center;
+
+}
+
+.teaser-link:hover, .teaser-link:focus {
+	opacity: 1;
+	transform: scale(1.005);
+cursor: pointer; }
+
+.teaser-element h2 {
+	filter: drop-shadow(0 0 30px #333); 
+	margin-bottom: 1rem;;
+}
+
+@media (min-width: 768px) {
+	.teaser_small .teaser-element { height: 200px; } 
+	.teaser-element {height: 300px; } 
+}
+
+/* --------- TEXTBLOCK --------- */
+.textblock-block {
+	display: flow-root;
+}
+
+.textblock-block h2 { margin-bottom: .5rem;}
+@media (min-width: 500px) {
+	.columns-2, .columns-3 {column-count: 2;}
+}
+@media (min-width: 800px) {
+	.columns-3  {column-count: 3;}
+}
+
+.initial-letter p::first-letter {
+	font-family: 'fette_fraktur', 'Times', serif;
+  -webkit-initial-letter: 1;
+          initial-letter: 1;
+  color: var(--wf-primary);
+  font-weight: bold;
+  margin-right: .75em;
+} 
+
+.initial-2 p::first-letter { -webkit-initial-letter: 2; initial-letter: 2;} 
+.initial-3 p::first-letter { -webkit-initial-letter: 3; initial-letter: 3;} 
+.initial-4 p::first-letter { -webkit-initial-letter: 4; initial-letter: 4;} 
+.initial-5 p::first-letter { -webkit-initial-letter: 5; initial-letter: 5;} 
+
+.textwithimage-block img.size-small { width: 20%;}
+.textwithimage-block img.size-medium { width: 40%;}
+.textwithimage-block img.size-large { width: 60%;}
+
+/* --------- ACCORDION --------- */
+
+
+.accordion input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+} 
+
+.tabs {
+	border-radius: var(--wf-br-small);
+  overflow: hidden;
+}
+
+.tab {
+  width: 100%;
+  color: white;
+  overflow: hidden;
+}
+
+.tab-label {
+	display: flex;
+	justify-content: space-between;
+	padding: 1em;
+	background: var(--wf-primary);
+	font-weight: bold;
+	cursor: pointer;
+}
+	/* Icon */
+.tab-label:hover { background: var(--wf-primary-dark); }
+.tab-label:after {
+		content: "\276F";
+		width: 1em;
+		height: 1em;
+		text-align: center;
+		transition: all .35s;
+}
+
+.tab-content {
+    max-height: 0;
+    padding: 0 1em;
+    color: var(--wf-primary);
+    background: white;
+    transition: all .35s;
+  }
+
+.accordion input:checked + .tab-label {
+    background: var(--wf-primary-dark);
+  }
+
+.accordion input:checked + .tab-label:after {
+      transform: rotate(90deg);
+    }
+
+.accordion input:checked  ~ .tab-content {
+	max-height: 100vh;
+	padding: 1em;
+}
+
+/* --------- Services --------- */
+
+.services {
+	flex-direction: row;
+} 
+.service {
+	min-width: 2rem;
+}  

@@ -7,7 +7,7 @@ Include Scripts
 
 function wooflex_script_enqueue() {
 	//css
-	wp_enqueue_style( 'customstyle', get_template_directory_uri() . '/css/style.css', array(), rand(111,9999), 'all');
+	wp_enqueue_style( 'customstyle', get_template_directory_uri() . '/assets/css/style.css', array(), rand(111,9999), 'all');
 
 
 	//js

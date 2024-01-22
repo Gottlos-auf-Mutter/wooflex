@@ -1,0 +1,40 @@
+:root {
+	--wf-primary: var(--wf-pink);
+	--wf-primary-dark: #e37b96;
+	--wf-primary-light: #ffa6c0;
+	--wf-secondary: var(--wf-gray);
+  --wf-bg: var(--wf-base);
+  --wf-fg: var(--wf-contrast);
+
+	--wf-base: #f9f9f9;
+	--wf-base-dark: #e6e5e2;
+	--wf-contrast: #111111;
+	--wf-white: #ffffff;
+	--wf-black: #000000;
+	--wf-pink: #f78da7;
+	--wf-gray: #515151;
+	--wf-gray-light: #888888;
+	--wf-gray-extralight: #999999;
+	--wf-gray-dark: #333333;
+	--wf-gray-extradark: #222222;
+
+	/* Woocommerce Color Overrides */
+	--woocommerce: var(--wf-primary);
+	--wc-green: #7ad03a;
+	--wc-red: #a00;
+	--wc-orange: #ffba00;
+	--wc-blue: #2ea2cc;
+	--wc-primary:  var(--wf-primary);
+	--wc-primary-text: white;
+	--wc-secondary: #e9e6ed;
+	--wc-secondary-text: #515151;
+	--wc-highlight: #b3af54;
+	--wc-highligh-text: white;
+	--wc-content-bg: #fff;
+	--wc-subtext: #767676;
+}
+
+.bgprimary { background-color: var(--wf-primary); } 
+
+.primary { color: var(--wf-primary); } 
+

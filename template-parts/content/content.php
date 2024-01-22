@@ -3,9 +3,8 @@
 -- Standard Post Format
 */
 ?>
-<div class="blogpost preview">
+<div class="blogpost-preview">
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
 		
 			<div class="entry-meta">
 				<small>Date: <?php the_time( 'F j, Y' ); ?>  |  Category: <?php the_category(); ?></small>
@@ -24,9 +23,9 @@
 
 		<div class="entry-content">
 
-			<dic class="entry-excerpt">
+			<div class="entry-excerpt">
 				<?php the_excerpt(); ?>
-			</dic>
+			</div>
 
 			<div class="btn-container">
 				<a href="<?php the_permalink(); ?>" class="btn btn-outline-primary"><?php _e( 'Read More' ) ?></a>
@@ -38,8 +37,6 @@
 
 		<footer class="entry-footer"></footer>
 
-	<!-- 	<p><?php the_content( $more_link_text = null, $strip_teaser = false );  ?></p>
-	 -->
 
 	</article>
 </div>

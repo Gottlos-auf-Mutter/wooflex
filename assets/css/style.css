@@ -1,0 +1,300 @@
+@import "reset.css";
+@import "fonts.css";
+@import "colors.css";
+@import "typography.css";
+@import "wf-blocks.css";
+@import "grid.css";
+@import "wf-woocommerce.css";
+
+
+/*--------- Site-Wide Elements -------*/
+:root {
+  --font-monospace: Courier, monospace;
+  --font-sans-serif: Verdana, Helvetica, sans-serif;
+  --font-serif: Times, Georgia, serif;
+}
+
+html {
+  font-family: var(--font-sans-serif);
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--wf-bg);
+  color: var(--wf-fg);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#main {padding-bottom: 5rem;}
+
+input { 
+	border-radius: .2rem;
+	border: none;
+}
+input:focus { border: 1px solid var(--wf-gray-light);}
+
+
+/*--------- Helper Classes -------*/
+
+.align-left {justify-content: left;}
+.align-center {justify-content: center;}
+.align-right {justify-content: right;}
+.float-left { float: left;}
+.float-right { float: right;}
+
+
+
+/*--------- Footer-------*/
+.footer-area {
+	margin-top: auto;
+}
+.primary-footer {
+	background: var(--wf-contrast);
+	color: var(--wf-white);
+	margin-top: auto;
+	padding: 1rem 0 3rem;
+	font-size: .8rem;
+}
+.primary-footer hr {
+	background: var(--wf-primary);
+	max-width: 12rem;
+	height: 2px;
+}
+.footer-logo {
+	display: flex;
+	justify-content: space-around;
+	gap: 2rem;
+}
+.footermenu {
+	display: flex;
+	gap: 2rem;
+	justify-content: space-around;
+	flex-direction: column;
+	text-align: center;
+	flex-wrap: wrap;
+}
+.footermenu > * {
+	min-width: 20ch;
+}
+@media (min-width: 500px) {
+	.footermenu {
+		flex-direction: row;
+	}
+}
+.footermenu h5 {
+	font-size: 1rem;
+	letter-spacing: .1rem;
+	text-transform: uppercase;
+	text-decoration: underline;
+}
+.footer-brand img { max-width: 10rem; }
+
+.widget-footer {
+	background: var(--wf-gray-extradark);
+	color: var(--wf-gray-light);
+	margin-top: auto;
+	padding-top: .8rem;
+}
+
+/*--------- Footer - Newsletter -------*/
+.widget-footer .mailpoet_form {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+	gap: 1rem;
+}
+
+.widget-footer input.mailpoet_text { 
+	background: transparent;
+	border: 1px solid var(--wf-primary-dark);
+	color: var(--wf-primary);
+}
+.widget-footer input.mailpoet_text::placeholder { color: var(--wf-gray-light); }
+.widget-footer input.mailpoet_text:focus {
+	outline: none !important;
+	border: 1px solid var(--wf-primary);
+}
+.widget-footer input.mailpoet_submit { 
+	background: var(--wf-primary);
+	color: var(--wf-contrast);
+}
+.widget-footer .mailpoet_form .mailpoet_form_paragraph {max-width: 20ch;}		
+
+/*--------- Header -------*/
+.primary-header {
+	background: var(--wf-contrast);
+	color: var(--wf-base);
+	padding: 1rem 0;
+	font-size: 0.8rem;
+	text-align: right;
+	text-transform: uppercase;
+	font-weight: bold;
+	margin-bottom:2rem;
+}
+
+.menu {
+	display: flex;
+	justify-content: space-between;
+	gap: 3rem;
+	align-items: center;
+}
+
+.logo img {
+	max-height: 50px;
+	display: inline-block;
+}
+.mainnav {
+	display: flex;
+	justify-content: flex-end;
+	flex-wrap: wrap;
+	gap: 1.5rem 2rem;
+	line-height: 0rem;
+}
+.shopnav {
+	display: flex;
+	gap: 1rem;
+}
+.shopnav .icon {
+	min-height: 1.7rem;
+}
+.header-cart {
+	position: relative;	
+}
+.header-cart .navbar-icon-link-badge {
+	position: absolute;
+	top: -.2rem;
+	left: -.4rem;
+	border-radius: 50%;
+	width: 1rem;
+	height: 1rem;
+	background: var(--wf-base);
+	color: var(--wf-primary);
+	font-size: 0.85rem;
+	font-weight: 700;
+	text-align: center;
+	line-height: 1.1rem;
+}
+
+#search { 
+	display: none;
+  opacity: 0;
+  transition:  0s linear 100ms, opacity 100ms;
+}
+
+#search:target {
+	display: block;
+	opacity: 1;
+}
+.menusearchform {
+	position: relative;
+}
+.menusearchform input {
+	background: transparent;
+	border: 1px solid var(--wf-primary);
+	color: var(--wf-primary);
+}
+.closebutton {
+	display: inline-block;
+	transform: rotate(45deg);
+	position: absolute;
+	top: -.2rem;
+	right: -.2rem;
+	color: var(--wf-white);
+	background: var(--wf-primary);
+	border-radius: 50%;
+	height: 1.5rem;
+	width: 1.5rem;
+	font-size: 1.5rem;
+	text-align: center;
+	line-height: .7;
+}
+
+
+	/* see https://codepen.io/sosuke/pen/Pjoqqp for filter calculation */
+.filter-primary { 
+	filter: invert(66%) sepia(21%) saturate(1011%) hue-rotate(298deg) brightness(99%) contrast(96%);
+} 
+
+#main > :first-child:is(.herobanner)  {
+	margin-top: -2rem;
+}
+
+
+/*--------- Buttons -------*/
+button, .btn, .button {
+	background-color: var(--wf-contrast);
+	color: var(--wf-base);
+	border-radius: 5px;
+	border: none;
+	padding: .5em 1em;
+}
+
+button:hover, .btn:hover, .button:hover,
+button:focus, .btn:focus, .button:focus {
+	background-color: var(--wf-gray-dark);
+}
+
+
+.btn-primary {
+	background-color: var(--wf-primary-dark);
+}
+
+.btn-primary:hover, .btn-primary:focus {
+	background-color: var(--wf-primary);
+}
+
+/*--------- Blog / Archive -------*/
+.blogpost-preview { margin-bottom: 3rem; }
+.blogpost-preview .entry-header {
+	min-height: 10rem;
+	background: center center / cover no-repeat var(--wf-contrast);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: var(--wf-br-small);
+	margin-bottom: 1rem;;
+}
+	
+.entry-meta {
+	text-align: center;
+	color: var(--wf-gray-light);
+
+}
+.entry-meta ul.post-categories  {display: inline;}
+.entry-meta ul.post-categories li {
+	display: inline;
+}
+
+.entry-content .btn-container { text-align: center; }
+
+
+/*--------- Single Blogpost -------*/
+.herobanner {
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	gap: 1rem;
+}
+.herobanner .entry-meta {
+	color: var(--wf-base);	
+}
+
+/*--------- Search Page -------*/
+.searchresults-header { margin-bottom: 2rem; }
+.searchresults-header .searchform input {
+	width: 100%;
+	max-width: 50ch;
+	display: block;
+	margin: 0 auto;
+	border: 1px solid var(--wf-primary);
+	color: var(--wf-primary);
+}
+
+/*--------- Mailpoet Newsletter -------*/
+
+.mailpoet_form_below_posts {
+	
+}  
