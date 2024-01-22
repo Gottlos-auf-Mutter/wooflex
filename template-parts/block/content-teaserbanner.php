@@ -25,6 +25,7 @@ $height = get_field('teaser_height');
 		$link = 	get_sub_field('teaser_link');
 		$button = get_sub_field('show_button');
 		?>
+			<div class="teaser <?php echo "$height"; ?> ">
 
 				<?php if( $link ): 
 				$link_url = $link['url'];
@@ -34,22 +35,25 @@ $height = get_field('teaser_height');
 				<a href="<?php echo esc_url( $link_url ); ?>">
 				<?php endif; ?>
 
-			<div class="teaser <?php echo "$height"; ?> ">
 
 				<div class="teaser-element"
+
 				<?php if($image): ?>
 					style="background-image:url(<?php echo $image['url']; ?>)"
 				<?php endif; ?>>
+
 					<h2><?php echo "$title" ?></h2>
+
 					<?php if($button): ?>
 						<a class="btn btn-primary" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
 					<?php endif; ?>
+
 				</div> <!-- teaser-element -->
 
-			</div> <!-- teaser -->
 
 			<?php if( $link ): ?></a><?php endif; ?>
 
+			</div> <!-- teaser -->
 
 		<?php endwhile; ?>
 		<?php endif; ?>
