@@ -1,8 +1,9 @@
-<aside id="sidebar" class="sidebar col-xl-3 col-lg-4 order-lg-1">
+<aside id="sidebar" class="sidebar shop-sidebar">
 	<?php if ( ! dynamic_sidebar( 'sidebar-shop' ) ) : ?>
 
 			<h3>Shop Sidebar</h3>
-			<p>This is the shop sidebar</p>
+			<p>Fill with Content from the Backend:</p>
+			<p>Appearance/Widgets/Shop Sidebar</p>
 
 	<?php endif; ?>
 </aside>

@@ -43,7 +43,6 @@ Additional Theme Customizer Options
 */
 
 
-/* ========  CTA Button Text ======== */
 
 function register_wooflex_customizer_settings( $wp_customize ) {
 
@@ -171,13 +170,13 @@ function wooflex_pagination( \WP_Query $wp_query = null, $echo = true, $params =
 
     if ( is_array( $pages ) ) {
         //$current_page = ( get_query_var( 'paged' ) == 0 ) ? 1 : get_query_var( 'paged' );
-        $pagination = '<div class="pagination row justify-content-md-center"><ul class="pagination col-12 col-md-9">';
+        $pagination = '<section class="pagination"><ul>';
 
         foreach ( $pages as $page ) {
             $pagination .= '<li class="page-item' . (strpos($page, 'current') !== false ? ' active' : '') . '"> ' . str_replace('page-numbers', 'page-link', $page) . '</li>';
         }
 
-        $pagination .= '</ul></div>';
+        $pagination .= '</ul></section>';
 
         if ( $echo ) {
             echo $pagination;

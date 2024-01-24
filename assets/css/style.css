@@ -163,7 +163,7 @@ input:focus { border: 1px solid var(--wf-gray-light);}
 	gap: 1rem;
 }
 .shopnav .icon {
-	min-height: 1.7rem;
+	min-height: 1.3rem;
 }
 .header-cart {
 	position: relative;	

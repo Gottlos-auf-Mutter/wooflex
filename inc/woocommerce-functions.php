@@ -5,10 +5,8 @@
 * ====================================
 */
 
-/**
- * Activate Woocommerce Suopport
- *------------------------------------------------------------------
- */
+// Activate Woocommerce Suopport
+
 function wf_add_woocommerce_support() {
 	add_theme_support( 'woocommerce' );
 }
@@ -25,38 +23,13 @@ function wf_setup() {
 
 
 /**
- * Removing the 'Add-to-cart'-button beneath products on shop/archive pages
- *------------------------------------------------------------------
- */
-remove_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart', 10 );
-
-
-
-/**
-* Update cart contents dynamicly via Ajax
-*------------------------------------------------------------------
+* ====================================
+*  Shop / Archive Pages
+* ====================================
 */
-add_filter( 'woocommerce_add_to_cart_fragments', 'woocommerce_header_add_to_cart_fragment' );
 
-function woocommerce_header_add_to_cart_fragment( $fragments ) {
-	global $woocommerce;
-
-	ob_start();
-
-	?>
-	<a class="nav-link header-cart-link" href="<?php echo wc_get_cart_url(); ?>" title="<?php _e( 'Shopping Cart' ) ?>" tabindex="-1">
-    	<i class="fas fa-shopping-cart"></i>
-    	<div class="navbar-icon-link-badge">
-    		<?php echo sprintf ( WC()->cart->get_cart_contents_count() ); ?>
-    	</div>
-    </a>
-	<?php
-	$fragments['a.header-cart-link'] = ob_get_clean();
-	return $fragments;
-}
-
-
-
+//  Removing the 'Add-to-cart'-button beneath products on shop/archive pages
+remove_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart', 10 );
 
 
 // change "angebot" bagde for German Site back to sale
@@ -71,7 +44,6 @@ function woocommerce_custom_sale_text($text, $post, $_product)
 * Single Product Site
 * ====================================
 */
-
 
 
 // remove Sidebar from single Product page
