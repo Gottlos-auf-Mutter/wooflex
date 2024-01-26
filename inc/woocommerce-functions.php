@@ -32,7 +32,7 @@ function wf_setup() {
 remove_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart', 10 );
 
 
-// change "angebot" bagde for German Site back to sale
+// change "angebot" bagde for German Site back to "sale"
 add_filter('woocommerce_sale_flash', 'woocommerce_custom_sale_text', 10, 3);
 function woocommerce_custom_sale_text($text, $post, $_product)
 {
@@ -54,9 +54,8 @@ function woostrap_remove_sidebar_product_pages() {
 	}
 }
 
-
+// move Headline over Product image
 remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_title', 5 );
-
 add_action( 'woocommerce_before_single_product', 'woocommerce_template_single_title', 5 );
 
 
@@ -64,7 +63,6 @@ add_action( 'woocommerce_before_single_product', 'woocommerce_template_single_ti
 /**
 * ====================================
 * Checkout
-
 * ====================================
 */
 
@@ -87,14 +85,4 @@ function remove_shipping_phone_field($fields) {
     unset( $fields ['shipping_phone'] ); // Remove shipping phone field
     return $fields;
 }
-/**
- * Remove product page tabs
- */
-add_filter( 'woocommerce_product_tabs', 'my_remove_all_product_tabs', 98 );
- 
-function my_remove_all_product_tabs( $tabs ) {
-  unset( $tabs['description'] );        // Remove the description tab
-  unset( $tabs['reviews'] );       // Remove the reviews tab
-  unset( $tabs['additional_information'] );    // Remove the additional information tab
-  return $tabs;
-}
+
