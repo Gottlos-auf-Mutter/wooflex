@@ -19,4 +19,4 @@
 	</head>
 	<body <?php body_class(); ?>>
 		<?php get_template_part( 'template-parts/header/mainnavigation'); ?>
-		<main id="main" role="main" class="content-grid">
+		<main id="maincontent" role="main" class="content-grid">

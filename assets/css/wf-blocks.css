@@ -43,7 +43,7 @@
 
 /* --------- HEROBANNER --------- */
 
-#main > :first-child:is(.herobanner-block)  {
+#maincontent > :first-child:is(.herobanner-block)  {
 	margin-top: -2rem;
 }
 

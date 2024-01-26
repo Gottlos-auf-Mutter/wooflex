@@ -4,7 +4,7 @@
 	--wf-primary-light: #ffa6c0;
 	--wf-secondary: var(--wf-gray);
   --wf-bg: var(--wf-base);
-  --wf-fg: var(--wf-contrast);
+  --wf-fg: var(--wf-gray-dark);
 
 	--wf-base: #f9f9f9;
 	--wf-base-dark: #e6e5e2;

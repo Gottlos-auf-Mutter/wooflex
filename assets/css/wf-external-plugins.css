@@ -1,0 +1,41 @@
+/*--------- 
+ WPC Brands for WooCommerce 
+ -------*/
+
+.wpcbr-brand {
+	opacity: .3;
+}
+.wpcbr-brand:hover,
+.wpcbr-brand:focus {
+	opacity: .4;
+}
+.wpcbr-brands .wpcbr-brand img {max-width: 3rem;}
+
+/*--------- 
+ WPC Additional Variation Images for WooCommerce 
+ -------*/
+.wpcvs-type-button .wpcvs-term > span {
+	padding: 0;
+}
+.wpcvs-term {
+	border: none;
+	color: var(--wf-gray);
+	font-size: .8rem;
+}
+.wpcvs-term.wpcvs-selected {
+	border: none;
+	background-color: #efefef;;
+}
+.wpcvs-term.wpcvs-selected  > span {
+	background-color: var(--wf-primary);
+	color: var(--wf-white)
+}
+.wpcvs-term.wpcvs-selected > span::before {
+display: none;
+}
+.wpcvs-attributes-stacked .wpcvs-attribute-label label,
+.wpcvs-attribute-selected {
+	color: var(--wf-gray-light);
+	font-size: .8rem;
+}
+.reset_variations {display: none !important;}

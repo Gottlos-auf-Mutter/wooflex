@@ -5,7 +5,7 @@
 @import "wf-blocks.css";
 @import "grid.css";
 @import "wf-woocommerce.css";
-
+@import "wf-external-plugins.css";
 
 /*--------- Site-Wide Elements -------*/
 :root {
@@ -32,7 +32,7 @@ body {
   flex-direction: column;
 }
 
-#main {padding-bottom: 5rem;}
+#maincontent {padding-bottom: 5rem;}
 
 input { 
 	border-radius: .2rem;
@@ -223,27 +223,29 @@ input:focus { border: 1px solid var(--wf-gray-light);}
 	filter: invert(66%) sepia(21%) saturate(1011%) hue-rotate(298deg) brightness(99%) contrast(96%);
 } 
 
-#main > :first-child:is(.herobanner)  {
+#maincontent > :first-child:is(.herobanner)  {
 	margin-top: -2rem;
 }
 
 
 /*--------- Buttons -------*/
-button, .btn, .button {
+button, .btn, .button, .single_add_to_cart_button, .wc-block-cart__submit-container {
 	background-color: var(--wf-contrast);
 	color: var(--wf-base);
-	border-radius: 5px;
+	border-radius: var(--wf-br);
 	border: none;
 	padding: .5em 1em;
 }
 
 button:hover, .btn:hover, .button:hover,
-button:focus, .btn:focus, .button:focus {
+button:focus, .btn:focus, .button:focus,
+.wc-block-cart__submit-container:hover,
+.wc-block-cart__submit-container:focus {
 	background-color: var(--wf-gray-dark);
 }
 
 
-.btn-primary {
+.btn-primary, .single_add_to_cart_button {
 	background-color: var(--wf-primary-dark);
 }
 
@@ -300,5 +302,5 @@ button:focus, .btn:focus, .button:focus {
 
 /*--------- Mailpoet Newsletter -------*/
 
-.mailpoet_form  { margin-bottom: 2rem; }
+.mailpoet_form  { margin-bottom: .2rem; }
 
