@@ -128,6 +128,21 @@ input:focus { border: 1px solid var(--wf-gray-light);}
 }
 .widget-footer .mailpoet_form .mailpoet_form_paragraph {max-width: 20ch;}		
 
+/*--------- Footer Social links  -------*/
+/*-(uses the wf "service"-block placed in the "footer Widgets" area )*/
+
+.footer-widgets .services {
+	justify-content: center;
+	gap: 2rem;
+	margin-bottom: 1rem;
+} 
+/* see https://codepen.io/sosuke/pen/Pjoqqp for filter calculation */
+.footer-widgets .service img {
+	filter: invert(66%) sepia(21%) saturate(1011%) hue-rotate(298deg) brightness(99%) contrast(96%);
+} 
+
+
+
 /*--------- Header -------*/
 .primary-header {
 	background: var(--wf-contrast);
