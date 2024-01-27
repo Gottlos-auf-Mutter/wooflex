@@ -33,7 +33,7 @@ h2 {font-family: var(--font-special2); line-height: 1;}
 h1, h2 {
 	text-align: center; 
 	color: var(--wf-primary);
-	margin-bottom: .3rem;;
+	margin-bottom: 1.3rem;;
 }
 
 h3, h4, h5, h6 {
