@@ -172,11 +172,31 @@ font-family: var(--font-special2);
 
 
 .single-product .entry-summary p.price {
-	color: var(--wf-primary) !important;
-	padding: 0 2rem;
-	font-family: var(--font-special2);
-	font-size: 2rem !important;
+	color: var(--wf-white) !important;
+  padding: 0 2rem;
+  font-family: var(--font-special2);
+  font-size: 2rem !important;
+  background: var(--wf-primary);
+  display: inline-block;
+  opacity: .9;
 }	
+
+table.variations {
+	padding: 0;
+}
+
+.woocommerce div.product form.cart table {
+	padding: 0;
+  margin: 0 0 1.5rem;
+}
+
+.woocommerce-variation-add-to-cart {
+	display: flex;
+}
+
+.woocommerce div.product form.cart div.quantity {
+  float: none;
+}
 
 .woocommerce div.product div.images .flex-control-thumbs {
 	margin-top: .5rem;
