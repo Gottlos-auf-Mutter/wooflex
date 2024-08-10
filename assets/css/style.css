@@ -57,7 +57,7 @@ input:focus { border: 1px solid var(--wf-gray-light);}
 }
 .primary-footer {
 	background: var(--wf-contrast);
-	color: var(--wf-white);
+	color: var(--wf-gray-extralight);
 	margin-top: auto;
 	padding: 1rem 0 3rem;
 	font-size: .8rem;
@@ -91,9 +91,7 @@ input:focus { border: 1px solid var(--wf-gray-light);}
 }
 .footermenu h5 {
 	font-size: 1rem;
-	letter-spacing: .1rem;
-	text-transform: uppercase;
-	text-decoration: underline;
+	font-family: var(--font-special1);
 }
 .footer-brand img { max-width: 10rem; }
 
