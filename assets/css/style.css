@@ -90,8 +90,8 @@ input:focus { border: 1px solid var(--wf-gray-light);}
 	}
 }
 .footermenu h5 {
-	font-size: 1rem;
-	font-family: var(--font-special1);
+	font-size: 1.3rem;
+	font-family: var(--font-special2);
 }
 .footer-brand img { max-width: 10rem; }
 
