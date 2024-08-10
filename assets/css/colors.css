@@ -11,12 +11,12 @@
 	--wf-contrast: #111111;
 	--wf-white: #ffffff;
 	--wf-black: #000000;
-	--wf-pink: #f78da7;
+	--wf-pink: #ffa3b5;
 	--wf-gray: #515151;
 	--wf-gray-light: #888888;
 	--wf-gray-extralight: #bbbbbb;
 	--wf-gray-dark: #333333;
-	--wf-gray-extradark: #222222;
+	--wf-gray-extradark: #212121;
 
 	/* Woocommerce Color Overrides */
 	--woocommerce: var(--wf-primary);

@@ -66,6 +66,7 @@ input:focus { border: 1px solid var(--wf-gray-light);}
 	background: var(--wf-primary);
 	max-width: 12rem;
 	height: 2px;
+	display: none;
 }
 .footer-logo {
 	display: flex;
@@ -139,6 +140,7 @@ input:focus { border: 1px solid var(--wf-gray-light);}
 /* see https://codepen.io/sosuke/pen/Pjoqqp for filter calculation */
 .footer-widgets .service img {
 	filter: invert(66%) sepia(21%) saturate(1011%) hue-rotate(298deg) brightness(99%) contrast(96%);
+	width: 1.5rem;
 } 
 
 
