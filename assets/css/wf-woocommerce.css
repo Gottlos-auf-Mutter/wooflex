@@ -26,6 +26,7 @@ aside.sidebar {
 aside.sidebar h2.wp-block-heading {
 	font-size: 2.2rem;
 	margin-left: -1rem;
+	color: var(--wf-gray-dark)
 }
 aside.sidebar h3.wp-block-heading {
 	font-size: 1rem;
@@ -96,6 +97,7 @@ font-family: var(--font-special2);
 	font-size: 1.2rem !important;
 	text-shadow: 0px 1px 20px rgba(0, 0, 0, .0); 
 	margin-top: -1.5rem !important;
+	color: var(--wf-gray-dark);
 } 
 .woocommerce ul.products li.product .price  {
 	position: absolute;
@@ -104,11 +106,10 @@ font-family: var(--font-special2);
 	transform: rotate(-10deg);
 	font-family: var(--font-special2);
 	font-size: 1.3rem;
-	color: var(--wf-white);
+	color: var(--wf-gray-dark);
 	line-height: .6;
-	background: var(--wf-primary-light);
+	background: var(--wf-gray-extralight);
 	padding: .2rem .4rem .4rem;
-	opacity: .9;
 }
 .woocommerce ul.products li.product .price del {
 	display: block;
@@ -136,10 +137,10 @@ font-family: var(--font-special2);
   top: -.6rem;
   left: -.7rem;
   font-family: var(--font-special2);
-  color: var(--wf-white);
+  color: var(--wf-gray-dark);
   font-size: 1.5rem;
   transform: rotate(-7deg);
-  background: var(--wf-primary);
+  background: var(--wf-gray-extralight);
   padding: .2rem .5rem;
   opacity: .9;
 }
@@ -172,13 +173,14 @@ font-family: var(--font-special2);
 
 
 .single-product .entry-summary p.price {
-	color: var(--wf-white) !important;
+	color: var(--wf-black) !important;
+	background: var(--wf-gray-extralight)!important;
   padding: 0 2rem;
   font-family: var(--font-special2);
   font-size: 2rem !important;
   background: var(--wf-primary);
   display: inline-block;
-  opacity: .9;
+  opacity: .7;
 }	
 
 table.variations {
@@ -251,6 +253,7 @@ table.variations {
 .woocommerce div.product .woocommerce-tabs ul.tabs li a {
 	font-weight: normal;
 	padding: 0;
+	color: var(--wf-gray-dark) !important;
 }
 .related ul.products {
 	background: var(--wf-white);
