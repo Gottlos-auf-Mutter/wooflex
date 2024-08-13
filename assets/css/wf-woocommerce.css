@@ -102,18 +102,44 @@ font-family: var(--font-special2);
 .woocommerce ul.products li.product .price  {
 	position: absolute;
 	top:-.5rem;
-	left: -.8rem;
+	left: -.6rem;
 	transform: rotate(-10deg);
 	font-family: var(--font-special2);
-	font-size: 1.3rem;
+	font-size: 1.4rem;
 	color: var(--wf-gray-dark);
+	font-weight: bold;
 	line-height: .6;
-	background: var(--wf-gray-extralight);
-	padding: .2rem .4rem .4rem;
+	padding: .4rem 1rem;
+	background: var(--wf-gray-light);
+	z-index: 1;
+  background-clip: text !important;
+	-webkit-background-clip: text !important;
+}	
+.woocommerce ul.products li.product .price::before {
+		content: "";
+    position: absolute;
+    z-index: -1;
+    bottom: -0.5rem;
+    left: -0.2rem;
+    height: calc( 1.25em + 1rem );
+    width: 100%;
+    background-color: inherit;
+    -webkit-mask-image: url('../images/brush-stroke-short-2-blue-4.svg');
+    mask-image: url('../images/brush-stroke-short-2-blue-4.svg');
+    -webkit-mask-position: left bottom;
+    mask-position: left bottom;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
 }
+
+
 .woocommerce ul.products li.product .price del {
 	display: block;
-	font-size: 1.3rem;
+  font-size: 1.1rem;
+  color: var(--wf-base-dark);
+  opacity: 1;
 }
 .woocommerce ul.products li.product .price ins {
 	text-decoration: none;
@@ -181,7 +207,29 @@ font-family: var(--font-special2);
   background: var(--wf-primary);
   display: inline-block;
   opacity: .7;
+  position: relative;
+	z-index: 1;
+  background-clip: text !important;
+	-webkit-background-clip: text !important;
 }	
+.single-product .entry-summary p.price::before {
+		content: "";
+    position: absolute;
+    z-index: -1;
+    bottom: -0.5rem;
+    left: -0.5rem;
+    height: calc( 1.25em + 1rem );
+    width: 100%;
+    background-color: inherit;
+    -webkit-mask-image: url('../images/brush-stroke-short-2-blue-4.svg');
+    mask-image: url('../images/brush-stroke-short-2-blue-4.svg');
+    -webkit-mask-position: left bottom;
+    mask-position: left bottom;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+}
 
 table.variations {
 	padding: 0;
