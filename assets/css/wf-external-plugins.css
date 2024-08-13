@@ -20,14 +20,16 @@
 .wpcvs-term {
 	border: none;
 	color: var(--wf-gray);
-	font-size: .8rem;
+	font-size: .7rem;
 }
 .wpcvs-term.wpcvs-selected {
 	border: none;
-	background-color: #efefef;;
+	background-color: var(--wf-gray-dark);
+}
+.wpcvs-terms.wpcvs-type-button .wpcvs-term {
+	line-height: 38px;
 }
 .wpcvs-term.wpcvs-selected  > span {
-	background-color: var(--wf-primary);
 	color: var(--wf-white)
 }
 .wpcvs-term.wpcvs-selected > span::before {
@@ -39,3 +41,5 @@ display: none;
 	font-size: .8rem;
 }
 .reset_variations {display: none !important;}
+
+

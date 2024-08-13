@@ -101,8 +101,8 @@ font-family: var(--font-special2);
 } 
 .woocommerce ul.products li.product .price  {
 	position: absolute;
-	top:-.5rem;
-	left: -.6rem;
+	top:-.3rem;
+	left: -1rem;
 	transform: rotate(-10deg);
 	font-family: var(--font-special2);
 	font-size: 1.4rem;
@@ -110,7 +110,7 @@ font-family: var(--font-special2);
 	font-weight: bold;
 	line-height: .6;
 	padding: .4rem 1rem;
-	background: var(--wf-gray-light);
+	background: var(--wf-gray-extralight);
 	z-index: 1;
   background-clip: text !important;
 	-webkit-background-clip: text !important;
