@@ -2,6 +2,10 @@
 .wf-block {
 	margin-bottom: 2rem;
 }
+
+.wf-block .nomargin {
+	margin: 0;
+}
 .light-bg, .dark-bg, .custom-bg {padding: 1.5rem;}
 .light-bg:not(.full-width), .dark-bg:not(.full-width), .custom-bg:not(.full-width) {
 	border-radius: var(--wf-br-small);

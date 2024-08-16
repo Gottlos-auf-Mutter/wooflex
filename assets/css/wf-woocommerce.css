@@ -49,7 +49,24 @@ aside.sidebar h3.wp-block-heading {
 	text-align: center;
 	color: var(--wf-gray-light);
 }
+/*--- Store Notice -- */
 
+
+
+.woocommerce-store-notice, p.demo_store {
+	background-color: var(--wf-primary);
+}
+/*--- make room for store notice if enabled -- */
+
+.woocommerce-demo-store {
+    margin-top: 70px;
+}
+
+@media (max-width: 768px) {
+    .woocommerce-demo-store {
+        margin-top: 90px;
+    }
+}
 /*--- Categories List Widget---*/
 .wc-block-product-categories-list {
 	color: var(--wf-gray-light);
