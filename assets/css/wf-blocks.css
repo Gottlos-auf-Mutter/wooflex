@@ -191,7 +191,7 @@ cursor: pointer; }
 .tab-content {
     max-height: 0;
     padding: 0 1em;
-    color: var(--wf-primary);
+    color: var(--wf-gray-dark);
     background: white;
     transition: all .35s;
   }
