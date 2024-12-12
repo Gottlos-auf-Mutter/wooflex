@@ -1,0 +1,36 @@
+.production .services {
+	margin-top: 2em;
+}
+.production h3 {
+	text-decoration: underline;
+	font-size: 1.1rem;
+}
+.production .services .service {
+    width: 100%;
+}
+
+.production .services .service p {
+	font-size: 0.9em;
+}
+.production .services .label {
+    height: 130px;
+	margin-bottom: 2em;
+}
+
+.production .service img {
+    max-height: 100%;
+    width: auto;
+    margin: 0 auto;
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: gray;
+}
+
+.production .service img:hover {
+    filter: none;
+}
+.test-style {
+    background: red !important;
+}

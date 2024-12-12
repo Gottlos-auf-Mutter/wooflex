@@ -6,6 +6,7 @@
 @import "grid.css";
 @import "wf-woocommerce.css";
 @import "wf-external-plugins.css";
+@import "wf-shortcodes.css";
 
 /*--------- Site-Wide Elements -------*/
 :root {
@@ -49,7 +50,7 @@ input:focus { border: 1px solid var(--wf-gray-light);}
 .float-left { float: left;}
 .float-right { float: right;}
 
-
+.aligncenter {margin-left: auto; margin-right: auto;} 
 
 /*--------- Footer-------*/
 .footer-area {

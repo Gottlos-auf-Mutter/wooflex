@@ -63,8 +63,8 @@ add_action( 'woocommerce_before_single_product', 'woocommerce_template_single_ti
 
 
 // Move Tabs/Description next to Product Image on desktop
-remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs', 10 );
-add_action( 'woocommerce_single_product_summary', 'woocommerce_output_product_data_tabs', 35 );
+//remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs', 10 );
+//add_action( 'woocommerce_single_product_summary', 'woocommerce_output_product_data_tabs', 35 );
 
 
 
@@ -93,4 +93,52 @@ function remove_shipping_phone_field($fields) {
     unset( $fields ['shipping_phone'] ); // Remove shipping phone field
     return $fields;
 }
+
+/**
+* ====================================
+* EMAILS
+* ====================================
+*/
+add_filter( 'woocommerce_email_attachments', 'bbloomer_attach_pdf_to_emails', 10, 4 );
+
+function bbloomer_attach_pdf_to_emails( $attachments, $email_id, $order, $email ) {
+    $email_ids = array( 'new_order', 'customer_processing_order' );
+    
+    if ( in_array( $email_id, $email_ids ) ) {
+        $upload_dir = get_stylesheet_directory();
+        $agb_pdf = $upload_dir . "/woocommerce/AGB.pdf";
+        $widerruf_pdf = $upload_dir . "/woocommerce/Widerruf.pdf";
+
+        if ( file_exists( $agb_pdf ) ) {
+            $attachments[] = $agb_pdf;
+        } else {
+            error_log( "AGB.pdf wurde nicht gefunden: " . $agb_pdf );
+        }
+        
+        if ( file_exists( $widerruf_pdf ) ) {
+            $attachments[] = $widerruf_pdf;
+        } else {
+            error_log( "Widerruf.pdf wurde nicht gefunden: " . $widerruf_pdf );
+        }
+    }
+    
+    return $attachments;
+}
+
+
+/**
+* ====================================
+* ORDERNUMBERS
+* ====================================
+*/
+
+add_filter( 'woocommerce_order_number', 'change_woocommerce_order_number' );
+
+function change_woocommerce_order_number( $order_id ) {
+    $prefix       = 'GAM';
+    $new_order_id = $prefix . $order_id;
+    return $new_order_id;
+}
+
+
 
