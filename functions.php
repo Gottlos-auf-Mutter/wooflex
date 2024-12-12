@@ -9,4 +9,6 @@ require get_template_directory() . '/inc/wf-blocks-functions.php';
 require get_template_directory() . '/inc/acf-blocks.php';
 require get_template_directory() . '/inc/wooflex-functions.php';
 require get_template_directory() . '/inc/wf-shortcode-functions.php';
+
+//disable Google Fonts from Mailpoet
 add_filter('mailpoet_display_custom_fonts', function () {return false;});
