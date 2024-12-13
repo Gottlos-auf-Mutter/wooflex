@@ -12,3 +12,11 @@ require get_template_directory() . '/inc/wf-shortcode-functions.php';
 
 //disable Google Fonts from Mailpoet
 add_filter('mailpoet_display_custom_fonts', function () {return false;});
+
+//remove author from oembed
+add_filter( 'oembed_response_data', 'disable_embeds_filter_oembed_response_data_' );
+function disable_embeds_filter_oembed_response_data_( $data ) {
+    unset($data['author_url']);
+    unset($data['author_name']);
+    return $data;
+}
