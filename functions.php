@@ -20,3 +20,17 @@ function disable_embeds_filter_oembed_response_data_( $data ) {
     unset($data['author_name']);
     return $data;
 }
+
+//change reply-to email address for woocommerce
+add_filter( 'woocommerce_email_headers', 'wc_change_reply_to_email_address', 10, 4 );
+function wc_change_reply_to_email_address( $header, $email_id, $order, $email ) {
+
+    // HERE below set the name and the email address
+    $reply_to_name  = 'Support | Gottlos-auf-Mutter';
+    $reply_to_email = 'support@gottlos-auf-mutter.de';
+
+    $header  = 'Content-Type: ' . $email->get_content_type() . "\r\n";
+    $header .= 'Reply-to: ' . utf8_decode($reply_to_name) . ' <' . sanitize_email($reply_to_email) . ">\r\n";
+
+    return $header;
+}
